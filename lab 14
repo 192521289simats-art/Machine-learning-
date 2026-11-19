@@ -1,0 +1,61 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOb6Mslqha3MFghLNK61MnI",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/192521289simats-art/Machine-learning-/blob/main/lab%2014\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 8,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "SbIKuxEhLgCq",
+        "outputId": "a055822e-e26e-4220-af75-88807795ffaa"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Predicted Price: 44.0 Lakhs\n"
+          ]
+        }
+      ],
+      "source": [
+        "from sklearn.linear_model import LinearRegression\n",
+        "\n",
+        "X = [[500], [800], [1000], [1200], [1500]]\n",
+        "y = [20, 32, 40, 48, 60]\n",
+        "\n",
+        "model = LinearRegression()\n",
+        "model.fit(X, y)\n",
+        "\n",
+        "print(\"Predicted Price:\", model.predict([[1100]])[0], \"Lakhs\")"
+      ]
+    }
+  ]
+}
