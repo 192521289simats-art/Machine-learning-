@@ -1,0 +1,54 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMaUCXenXUy1qdb98hfGxfc",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/192521289simats-art/Machine-learning-/blob/main/lab%206\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "IcPSwJ-bPt0y"
+      },
+      "outputs": [],
+      "source": [
+        "from sklearn.naive_bayes import GaussianNB\n",
+        "from sklearn.metrics import confusion_matrix, accuracy_score\n",
+        "\n",
+        "X = [[1,20], [2,21], [8,80], [9,85]]\n",
+        "y = [0, 0, 1, 1]\n",
+        "\n",
+        "model = GaussianNB()\n",
+        "model.fit(X, y)\n",
+        "\n",
+        "pred = model.predict(X)\n",
+        "\n",
+        "print(\"Confusion Matrix:\")\n",
+        "print(confusion_matrix(y, pred))\n",
+        "print(\"Accuracy:\", accuracy_score(y, pred))"
+      ]
+    }
+  ]
+}
