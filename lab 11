@@ -1,0 +1,61 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMq9So98/m+tHfQQqdnu2N5",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/192521289simats-art/Machine-learning-/blob/main/lab%2011\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 5,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "SbIKuxEhLgCq",
+        "outputId": "13555fe1-b705-452f-bea6-605da63f4534"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Cluster: [0 0 0 1 1 1]\n"
+          ]
+        }
+      ],
+      "source": [
+        "from sklearn.tree import DecisionTreeClassifier\n",
+        "\n",
+        "X = [[300], [450], [550], [650], [750], [850]]\n",
+        "y = ['Poor', 'Poor', 'Average', 'Good', 'Good', 'Excellent']\n",
+        "\n",
+        "model = DecisionTreeClassifier()\n",
+        "model.fit(X, y)\n",
+        "\n",
+        "print(\"Credit Class:\", model.predict([[700]])[0])"
+      ]
+    }
+  ]
+}
