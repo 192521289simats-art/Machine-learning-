@@ -1,0 +1,68 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMH6iwyN3xVlo/DWQuTeoxJ",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/192521289simats-art/Machine-learning-/blob/main/lab%201\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "zmQc-sB54JP1",
+        "outputId": "3ccd6cc7-dbd7-4de0-dc49-e9de1df94cb8"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Final Hypothesis: ['Sunny', 'Warm', '?', 'Strong', '?', '?']\n"
+          ]
+        }
+      ],
+      "source": [
+        "data = [\n",
+        "    ['Sunny', 'Warm', 'Normal', 'Strong', 'Warm', 'Same', 'Yes'],\n",
+        "    ['Sunny', 'Warm', 'High', 'Strong', 'Warm', 'Same', 'Yes'],\n",
+        "    ['Rainy', 'Cold', 'High', 'Strong', 'Warm', 'Change', 'No'],\n",
+        "    ['Sunny', 'Warm', 'High', 'Strong', 'Cool', 'Change', 'Yes']\n",
+        "]\n",
+        "\n",
+        "h = data[0][:-1]\n",
+        "\n",
+        "for row in data:\n",
+        "    if row[-1] == 'Yes':\n",
+        "        for i in range(len(h)):\n",
+        "            if h[i] != row[i]:\n",
+        "                h[i] = '?'\n",
+        "\n",
+        "print(\"Final Hypothesis:\", h)"
+      ]
+    }
+  ]
+}
